@@ -13,14 +13,21 @@ public class Principal {
 		num=leer.nextInt();
 		
 		password [] vContra= new password[num];
+		password [] vContraFuerte= new password[num];
+		boolean[] vFuertes = new boolean[num];
 		int tamaño=0;
 		System.out.println("introduce la longitud de la contraseña");
 		tamaño=leer.nextInt();
 		
-		for (int i = 0; i < vContra.length; i++) {
+		for (int i = 0; i < num; i++) {
 			password p = new password(tamaño);
 			vContra[i]=p;
+			vFuertes[i] = p.esFuerte();
 			System.out.println(vContra[i]);
+			if (p.esFuerte()==true) {
+				vContraFuerte[i]=p;	
+		}
+			
 		}
 		//
 	}
