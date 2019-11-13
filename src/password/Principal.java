@@ -22,7 +22,7 @@ public class Principal {
 			vContra[i]=p;
 			System.out.println(vContra[i]);
 		}
-		
+		//
 	}
 
 }
