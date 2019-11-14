@@ -16,8 +16,8 @@ public class password {
 		generarpassword(longitud);
 	}
 	
-	public void generarpassword(int longitud) {
-		contraseña="";
+	private void generarpassword(int longitud) {
+		String contraseña="";
 		int num =0;
 		Random r = new Random();
 		
@@ -28,23 +28,24 @@ public class password {
 			switch (num) {
 			case 0:
 				
-					contraseña += (char) (r.nextInt(25)+65);
+					contraseña += (char) (r.nextInt(26)+65);
 				
 				break;
 			case 1:
 				
-					contraseña += (char) (r.nextInt(9)+48);
+					contraseña += (char) (r.nextInt(10)+48);
 					
 				
 				break;
 			case 2:
 				
-					contraseña += (char) (r.nextInt(25)+97);
+					contraseña += (char) (r.nextInt(26)+97);
 					
 				
 				break;
 			}
 		}
+		this.contraseña=contraseña;
 	}
 
 	public int getLongitud() {
@@ -59,7 +60,6 @@ public class password {
 		return contraseña;
 	}
 
-	@Override
 	public String toString() {
 		return "password [contraseña=" + contraseña + ", esFuerte()=" + esFuerte() + "]";
 	}
