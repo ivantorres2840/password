@@ -70,8 +70,8 @@ public class password {
 		int numminus=0;
 		int nums=0;
 		
-		for (int i = 0; i < contraseña.length(); i++) {
-			numcaracter=contraseña.codePointAt(i);
+		for (int i = 0; i < this.contraseña.length(); i++) {
+			numcaracter=this.contraseña.codePointAt(i);
 			
 			if (numcaracter<58) {
 				nums++;
